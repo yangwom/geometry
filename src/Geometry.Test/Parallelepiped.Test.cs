@@ -7,6 +7,16 @@ public class ParallelepipedTest
     [Theory]
     public void TestParallelepiped(double height, double width, double depth)
     {
-        throw new System.NotImplementedException();
+        var expected = new Parallelepiped(height, width, depth);
+
+        expected.Height.Should().Be(height);
+        expected.Width.Should().Be(width);
+        expected.Depth.Should().Be(depth);
+        expected.Volume.Should().Be(width * height * depth);
+        expected.FaceA.Area.Should().Be(width * height);
+        expected.FaceB.Area.Should().Be(width * depth);
+        expected.FaceC.Area.Should().Be(height * depth);
+        
+
     }
 }
