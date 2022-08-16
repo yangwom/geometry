@@ -23,7 +23,7 @@ public class Rectangle
     } }
     public double Area { get { return Width * Height; }}
 
-    public double Perimeter { get { return Width * Height; } }
+    public double Perimeter { get { return Width * 2 + Height * 2; } }
 
     public Rectangle(double width, double height) {
     Width = width;
