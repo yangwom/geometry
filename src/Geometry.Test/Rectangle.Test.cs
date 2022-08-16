@@ -2,12 +2,16 @@ namespace Geometry.Test;
 
 public class RectangleTest
 {
-    [InlineData(2, 2)]
-    [InlineData(10, 5)]
+    [InlineData(2, 2, 4)]
+    [InlineData(10, 5, 50)]
     [Theory]
-    public void TestRectangle(double sideA, double sideB)
+    public void TestRectangle(double sideA, double sideB, double result)
     {
-        throw new System.NotImplementedException();
+        var instance = new Rectangle(sideA, sideB);
+        instance.Width.Should().Be(sideA);
+        instance.Height.Should().Be(sideB);
+        instance.Area.Should().Be(result);
+
     }
 
     [InlineData(0, 4)]
@@ -17,6 +21,8 @@ public class RectangleTest
     [Theory]
     public void TestRectangleNonPositiveSideException(double sideA, double sideB)
     {
-        throw new System.NotImplementedException();
+       Action act = () => new Rectangle(sideA, sideB);
+
+       act.Should().Throw<ArgumentException>().WithMessage("All sides must be greater than zero");
     }
 }
