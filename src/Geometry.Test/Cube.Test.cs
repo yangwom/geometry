@@ -8,6 +8,14 @@ public class CubeTest
     [Theory]
     public void TestCube(double side)
     {
-        throw new System.NotImplementedException();
+     var instance = new Cube(side);
+
+     instance.Side.Should().Be(side);
+     instance.GetType().IsInstanceOfType(nameof(Parallelepiped));
+     var resultBoolean = instance.FaceA.Area == instance.FaceB.Area && instance.FaceA.Area == instance.FaceC.Area && instance.FaceB.Area == instance.FaceC.Area;
+     resultBoolean.Should().Be(true);
+
+    instance.Volume.Should().Be(side * side * side);
+
     }
 }

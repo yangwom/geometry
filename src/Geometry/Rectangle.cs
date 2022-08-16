@@ -10,7 +10,7 @@ public class Rectangle
      static void Main()
      {
         // teste
-       var instance = new Square(2);
+       var instance = new Square(1);
         WriteLine($" eu sou filho de rectangle: {instance.Area}");
      }
     public double Width { get { return _width; } set {
@@ -23,7 +23,7 @@ public class Rectangle
     } }
     public double Area { get { return Width * Height; }}
 
-    public double Perimeter { get { return Width * 2 + Height * 2; } }
+    public double Perimeter { get { return Width + Height; } }
 
     public Rectangle(double width, double height) {
     Width = width;

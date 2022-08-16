@@ -25,7 +25,7 @@ public class Parallelepiped
 
     public Rectangle FaceC { get; set; }
 
-    public double SurfaceArea { get { return FaceA.Area * 2 + FaceB.Area * 2 + FaceC.Area * 2; } }
+    public double SurfaceArea { get { return (FaceA.Area * 2) + (FaceB.Area * 2) + (FaceC.Area * 2); } }
 
     public double Volume { get { return Width * Height * Depth; } }
 
