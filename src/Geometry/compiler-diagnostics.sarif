@@ -11,7 +11,87 @@
         "language": "pt-BR"
       },
       "results": [
-      ]
+        {
+          "ruleId": "CS0108",
+          "level": "warning",
+          "message": "\"Cube.FaceA\" oculta o membro herdado \"Parallelepiped.FaceA\". Use a nova palavra-chave se foi pretendido ocultar.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/yang/projetosc%23/acc-csharp-07-exercises-geometry/src/Geometry/Cube.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 19,
+                  "endLine": 7,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 2
+          }
+        },
+        {
+          "ruleId": "CS0108",
+          "level": "warning",
+          "message": "\"Cube.FaceB\" oculta o membro herdado \"Parallelepiped.FaceB\". Use a nova palavra-chave se foi pretendido ocultar.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/yang/projetosc%23/acc-csharp-07-exercises-geometry/src/Geometry/Cube.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 19,
+                  "endLine": 8,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 2
+          }
+        },
+        {
+          "ruleId": "CS0108",
+          "level": "warning",
+          "message": "\"Cube.FaceC\" oculta o membro herdado \"Parallelepiped.FaceC\". Use a nova palavra-chave se foi pretendido ocultar.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/yang/projetosc%23/acc-csharp-07-exercises-geometry/src/Geometry/Cube.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 19,
+                  "endLine": 9,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 2
+          }
+        }
+      ],
+      "rules": {
+        "CS0108": {
+          "id": "CS0108",
+          "shortDescription": "O membro oculta o membro herdado; nova palavra-chave ausente",
+          "fullDescription": "Uma variável foi declarada com o mesmo nome que uma variável no tipo base. No entanto, a palavra-chave new não foi usada. Este aviso informa que você deve usar new. A variável foi declarada como se new tivesse sido usada na declaração.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0108)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        }
+      }
     }
   ]
 }
