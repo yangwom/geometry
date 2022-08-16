@@ -10,5 +10,9 @@ public class SquareTest
     {
          var instance = new Square(side);
          instance.GetType().IsInstanceOfType(nameof(Rectangle));
+         instance.Width.Should().Be(side);
+         instance.Height.Should().Be(side);
+         instance.Area.Should().Be(side * side);
+         
     }
 }
