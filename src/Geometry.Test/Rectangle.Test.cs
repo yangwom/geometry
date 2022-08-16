@@ -2,12 +2,13 @@ namespace Geometry.Test;
 
 public class RectangleTest
 {
-    [InlineData(2, 2, 4)]
-    [InlineData(10, 5, 50)]
+    [InlineData(2, 2)]
+    [InlineData(10, 5)]
     [Theory]
-    public void TestRectangle(double sideA, double sideB, double result)
+    public void TestRectangle(double sideA, double sideB)
     {
         var instance = new Rectangle(sideA, sideB);
+        var result = sideA * sideB;
         instance.Width.Should().Be(sideA);
         instance.Height.Should().Be(sideB);
         instance.Area.Should().Be(result);
