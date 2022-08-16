@@ -10,8 +10,8 @@ public class Rectangle
      static void Main()
      {
         // teste
-       var instance = new Rectangle(-5, -2);
-        WriteLine(instance.Area);
+       var instance = new Square(2);
+        WriteLine($" eu sou filho de rectangle: {instance.Area}");
      }
     public double Width { get { return _width; } set {
         if(value < 0) throw new ArgumentException("All sides must be greater than zero");
@@ -21,7 +21,7 @@ public class Rectangle
         if(value < 0) throw new ArgumentException("All sides must be greater than zero");
         _height = value;
     } }
-    public double Area { get { return _width * _height; }}
+    public double Area { get { return Width * Height; }}
 
     public double Perimeter { get { return Width * Height; } }
 
